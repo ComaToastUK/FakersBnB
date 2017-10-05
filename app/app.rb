@@ -22,7 +22,8 @@ class FakersBnB < Sinatra::Base
     Listing.create(  title: params[:title],
                      price: params[:price],
                      location: params[:location],
-                     imageurl: params[:imageurl])
+                     imageurl: params[:imageurl],
+                      details: params[:details])
     redirect '/listings'
   end
 
@@ -40,5 +41,4 @@ class FakersBnB < Sinatra::Base
     session[:filter_by_location] = params[:filter_by_location] #'penge'
       redirect 'listings/filter'
   end
-
 end
