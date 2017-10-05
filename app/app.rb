@@ -2,15 +2,19 @@ ENV['RACK_ENV'] ||='development'
 
 require 'sinatra/base'
 require 'sinatra/flash'
+require_relative 'datamapper-setup'
 
 class FakersBnB < Sinatra::Base
 
+  enable :sessions
+  
   get '/' do
-    redirect '/properties'
+    redirect '/listings'
   end
 
-  get '/properties' do
-    '1 bedroom flat'
+  get '/listings' do
+    @listings = Listing.all
+    erb :'listings/index'
   end
 
 end
