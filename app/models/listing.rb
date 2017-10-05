@@ -10,6 +10,6 @@ class Listing
  property :price, Integer
  property :title, String
  property :imageurl, Text
- property :location, String
+ property :location, String #'Penge'
 
 end
