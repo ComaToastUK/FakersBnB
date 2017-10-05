@@ -1,7 +1,3 @@
-require 'data_mapper'
-require 'dm-postgres-adapter'
-
-
 class Listing
 
   include DataMapper::Resource
@@ -11,5 +7,6 @@ class Listing
  property :title, String
  property :imageurl, Text
  property :location, String
+ property :details, Text
 
 end
