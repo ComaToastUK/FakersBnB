@@ -10,7 +10,7 @@ class FakersBnB < Sinatra::Base
     set :session_secret, 'super secret'
 
   get '/' do
-    redirect '/listings'
+    redirect '/listings/new'
   end
 
   get '/listings' do
@@ -19,12 +19,11 @@ class FakersBnB < Sinatra::Base
   end
 
   post '/listings' do
-    @listing = Listing.create( title: params[:title],
-                 price: params[:price],
-                 location: params[:location],
-                 imageurl: params[:imageurl],
-                 details: params[:details]
-               )
+    Listing.create(  title: params[:title],
+                     price: params[:price],
+                     location: params[:location],
+                     imageurl: params[:imageurl],
+                      details: params[:details])
     redirect '/listings'
   end
 
@@ -32,4 +31,14 @@ class FakersBnB < Sinatra::Base
     erb :'listings/new'
   end
 
+  get '/listings/filter' do
+    @filter_by_location = session[:filter_by_location]
+    @listings = Listing.all
+    erb :'listings/filter'
+  end
+
+  post '/listings/filter' do
+    session[:filter_by_location] = params[:filter_by_location] #'penge'
+      redirect 'listings/filter'
+  end
 end

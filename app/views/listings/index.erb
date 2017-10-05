@@ -1,9 +1,10 @@
 <ul id='listings'>
-  <% @listings.each do |listing| %>
-  <%= listing.title.capitalize %>
-  <%= listing.location %>
-  <%= listing.price %>
-  <img src="<%=listing.imageurl%>" width="300px" />
-  <%= listing.details %>
-</ul>
-<%end%>
+    <% @listings.each do |listing| %>
+    <%= listing.title.capitalize %>
+    <%= listing.location %>
+    <%= listing.price %>
+    <img src="<%=listing.imageurl%>" width="300px" />
+    <%= listing.details %>
+    <%end%>
+  </ul>
+

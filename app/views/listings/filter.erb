@@ -1,0 +1,17 @@
+<form action='/listings/filter' method='POST'>
+    Filter by location:
+    <input type='text' name='filter_by_location' />
+    <input type='submit' value='Submit' />
+</form>
+
+  <% @listings.each do |listing| %>
+    <% if @filter_by_location == listing.location %>
+      <ul id='listings_filtered'>
+        <%= listing.title.capitalize %>
+        <%= listing.location %>
+        <%= listing.price %>
+        <img src="<%=listing.imageurl%>" width="300px" />
+      </ul>
+      <%else%>
+    <%end%>
+  <%end%>
