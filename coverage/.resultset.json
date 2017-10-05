@@ -1,0 +1,41 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/sunaliseth/Projects/FakersBnB/spec/features/add_listing_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/sunaliseth/Projects/FakersBnB/spec/features/features_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1507210103
+  }
+}
