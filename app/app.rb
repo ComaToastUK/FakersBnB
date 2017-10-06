@@ -81,12 +81,17 @@ end
 
     get '/listings/filter' do
     @filter_by_location = session[:filter_by_location]
+    @min_price = session[:min_price]
+    @max_price = session[:max_price]
     @listings = Listing.all
     erb :'listings/filter'
   end
 
   post '/listings/filter' do
-    session[:filter_by_location] = params[:filter_by_location] #'penge'
-      redirect 'listings/filter'
+    # p params
+    session[:filter_by_location] = params[:filter_by_location]
+    session[:min_price] = params[:min_price]
+    session[:max_price] = params[:max_price]
+    redirect '/listings/filter'
   end
 end

@@ -6,6 +6,17 @@
     <%= listing.price %>
     <img src="<%=listing.imageurl%>" width="300px" />
     <%= listing.details %>
-  </li>
-  <%end%>
-</ul>
+     </li>
+   <%end%>
+  </ul>
+
+  <form action='/listings/filter' method='POST'>
+      Filter by location:
+      <input type='text' name='filter_by_location' />
+      Filter by min. price:
+      <input type='number' name='min_price' value=0/>
+      Filter by max. price:
+      <input type='number' name='max_price' value=1000/>
+      <input type='submit' value='Submit' />
+  </form>
+
