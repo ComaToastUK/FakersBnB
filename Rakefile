@@ -1,4 +1,6 @@
-require 'data_mapper'
+require "data_mapper"
+require 'dm-validations'
+require 'dm-postgres-adapter'
 require './app/app.rb'
 
 namespace :db do

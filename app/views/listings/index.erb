@@ -11,13 +11,15 @@
     <head class="App-header">
 
 <ul id='listings'>
-    <% @listings.each do |listing| %>
+  <% @listings.each do |listing| %>
+  <li>
     <%= listing.title.capitalize %>
     <%= listing.location %>
     <%= listing.price %>
     <img src="<%=listing.imageurl%>" width="300px" />
     <%= listing.details %>
-    <%end%>
+     </li>
+   <%end%>
   </ul>
 
   <form action='/listings/filter' method='POST'>
@@ -35,3 +37,4 @@
 </div>
 </body>
 </html>
+

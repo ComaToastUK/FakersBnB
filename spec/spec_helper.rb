@@ -6,6 +6,7 @@ require 'simplecov-console'
 require File.join(File.dirname(__FILE__),'../app', 'app.rb')
 require 'database_cleaner'
 require 'pry'
+require_relative 'helpers/session'
 
 Capybara.app = FakersBnB
 
@@ -15,6 +16,9 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 SimpleCov.start
 
 RSpec.configure do |config|
+
+  config.include SessionHelpers
+
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
