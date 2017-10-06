@@ -1,32 +1,56 @@
-<h1> Add a Listing </h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action='/listings' method='POST'>
-  <label for='title'>
-    Listing Title:
-    <input type='text' name='title' />
-  </label>
 
-  <label for='price'>
-    Price per Night:
-    <input type='number' name='price' />
-  </label>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-  <label for='location'>
-    Location:
-    <input type='text' name='location' />
-  </label>
+<body>
+<div class="container-fluid">
+<div class="app">
+      <br>
+      <h1 class="App-title"> Welcome to FakersBnB </h1>
+    <h1> Add a Listing here </h1>
+      <div class="App-header">
+        <form action='/listings' method='POST'>
+          <label for='title'>
+            Listing Title
+            <br/>
+            <input type='text' name='title' />
+          </label>
 
-  <label for='imageurl'>
-    Image URL:
-    <input type='url' name='imageurl' />
-  </label>
+          <label for='price'>
+            Price per Night
+            <br/>
+            <input type='number' name='price' />
+          </label>
+          <br>
+          <label for='location'>
+            Location
+            <br/>
 
-  <label for='details'>
-    Detail:
-    <textarea rows="4" cols="50" placeholder="Describe your property" name='details'>
-    </textarea>
-  </label>
+            <input type='text' name='location' />
+          </label>
 
-  <input type='submit' value='Add Listing'>
-
-</form>
+          <label for='imageurl'>
+            Enter image URL
+            <br/>
+            <input type='url' name='imageurl' />
+          </label>
+            <br>
+            <br>
+          <label for='details'>
+            Add more details here:
+            <textarea class='add_more_details' rows="4" cols="30" placeholder="Describe your property" name='details'>
+            </textarea>
+          </label>
+        <input type='submit' value='Add Listing'>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

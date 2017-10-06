@@ -88,7 +88,6 @@ end
   end
 
   post '/listings/filter' do
-    # p params
     session[:filter_by_location] = params[:filter_by_location]
     session[:min_price] = params[:min_price]
     session[:max_price] = params[:max_price]

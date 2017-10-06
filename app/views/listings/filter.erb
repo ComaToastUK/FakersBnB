@@ -1,10 +1,37 @@
-  <% @listings.each do |listing| %>
-    <% if ((@filter_by_location == listing.location) && (@min_price.to_i <= listing.price.to_i) && (@max_price.to_i >= listing.price.to_i))%>
-      <ul id='listings_filtered'>
-        <%= listing.title %>
-        <%= listing.location %>
-        <%= listing.price %>
-        <img src="<%=listing.imageurl%>" width="300px" />
-      </ul>
-    <%end%>
-  <%end%>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="app">
+    <head class="App-header">
+    <% @listings.each do |listing| %>
+      <% if ((@filter_by_location == listing.location) && (@min_price.to_i <= listing.price.to_i) && (@max_price.to_i >= listing.price.to_i))%>
+          <ul id='listings_filtered'>
+            <%= listing.title %>
+            <%= listing.location %>
+            <%= listing.price %>
+            <img src="<%=listing.imageurl%>" width="300px" />
+          </ul>
+        <%end%>
+      <%end%>
+    </head>
+  </div>
+</div>
+</body>
+</html>
