@@ -8,5 +8,5 @@ class Listing
  property :imageurl, Text
  property :location, String
  property :details, Text
-
+  
 end
